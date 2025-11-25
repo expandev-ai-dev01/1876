@@ -7,13 +7,14 @@
  */
 
 import { Router } from 'express';
+import * as taskController from '@/api/v1/internal/task/controller';
 
 const router = Router();
 
 /**
- * @remarks
- * Internal routes will be added here as features are implemented.
- * Examples: resource management, user operations, protected data access, etc.
+ * @rule {be-route-configuration}
+ * Task management routes
  */
+router.post('/task', taskController.postHandler);
 
 export default router;
